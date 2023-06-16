@@ -1,0 +1,57 @@
+using System;
+
+class Person
+{
+    private string name;
+    private int age;
+    private string gender;
+    private string phoneNumber;
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+
+    public int Age
+    {
+        get { return age; }
+        set { age = value; }
+    }
+
+    public string Gender
+    {
+        get { return gender; }
+        set { gender = value; }
+    }
+
+    public string PhoneNumber
+    {
+        get { return phoneNumber; }
+        set { phoneNumber = value; }
+    }
+
+    public void Print()
+    {
+        Console.WriteLine("Ім'я: " + name);
+        Console.WriteLine("Вік: " + age);
+        Console.WriteLine("Стать: " + gender);
+        Console.WriteLine("Телефонний номер: " + phoneNumber);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Person person = new Person();
+        person.Name = "Діана";
+        person.Age = 21;
+        person.Gender = "жіноча";
+        person.PhoneNumber = "+380123456789";
+
+        person.Print();
+
+        Console.ReadLine();
+    }
+}
