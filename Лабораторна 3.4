@@ -1,0 +1,37 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Введіть номер місяця: ");
+        int month = int.Parse(Console.ReadLine());
+        string season;
+        switch (month)
+        {
+            case 12:
+            case 1:
+            case 2:
+                season = "зима";
+                break;
+            case 3:
+            case 4:
+            case 5:
+                season = "весна";
+                break;
+            case 6:
+            case 7:
+            case 8:
+                season = "літо";
+                break;
+            case 9:
+            case 10:
+            case 11:
+                season = "осінь";
+                break;
+            default:
+                season = "невідома пора року";
+                break;
+        }
+    Console.WriteLine("Пора року: " + season);
+    }
+}
