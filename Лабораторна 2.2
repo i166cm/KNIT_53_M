@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Введіть натуральне число (a < 100): ");
+        int a = int.Parse(Console.ReadLine());
+
+        int count = 0; // Змінна для підрахунку кількості цифр
+        int sum = 0; // Змінна для обчислення суми цифр
+
+        // Перебираємо цифри числа
+        while (a > 0)
+        {
+            int digit = a % 10; // Отримуємо останню цифру числа
+            count++; // Збільшуємо лічильник кількості цифр
+            sum += digit; // Додаємо цифру до суми
+            a /= 10; // Видаляємо останню цифру числа
+        }
+
+        Console.WriteLine($"Кількість цифр: {count}");
+        Console.WriteLine($"Сума цифр: {sum}");
+    }
+}
