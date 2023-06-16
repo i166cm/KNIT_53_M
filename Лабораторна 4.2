@@ -1,0 +1,45 @@
+using System;
+class Student
+{
+    protected string name;
+    protected int age;
+    protected string studentId;
+    public Student(string name, int age, string studentId)
+    {
+        this.name = name;
+        this.age = age;
+        this.studentId = studentId;
+    }
+    public void PrintInfo()
+    {
+        Console.WriteLine("Ім'я: " + name);
+        Console.WriteLine("Вік: " + age);
+        Console.WriteLine("ID студента: " + studentId);
+    }
+}
+class Aspirant : Student
+{
+    protected string researchTopic;
+    public Aspirant(string name, int age, string studentId, string researchTopic)
+        : base(name, age, studentId)
+    {
+        this.researchTopic = researchTopic;
+    }
+    public void PrintResearchTopic()
+    {
+        Console.WriteLine("Тема дослідження: " + researchTopic);
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Student student = new Student("Діана", 21, "S001");
+        student.PrintInfo();
+        Console.WriteLine();
+        Aspirant aspirant = new Aspirant("Юрій", 23, "S002", "Графічні конструкції");
+        aspirant.PrintInfo();
+        aspirant.PrintResearchTopic();
+        Console.ReadLine();
+    }
+}
